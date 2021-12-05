@@ -1,0 +1,3 @@
+mywallet
+123
+http://opennode.xmr-tw.org:18089

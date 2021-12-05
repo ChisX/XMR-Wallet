@@ -1,0 +1,192 @@
+/* --- Font Imports --- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+/* --- CSS Variables --- */
+:root
+{
+  /* --- CSS Palette --- */
+  --clr-A1: hsl(205, 86%,  17%);
+  --clr-A2: hsl(205, 77%,  27%);
+  --clr-A3: hsl(205, 72%,  37%);
+  --clr-A4: hsl(205, 63%,  48%);
+  --clr-A5: hsl(205, 89%,  70%);
+  --clr-A6: hsl(205, 90%,  76%);
+  --clr-A7: hsl(205, 86%,  81%);
+  --clr-A8: hsl(205, 90%,  88%);
+  --clr-A9: hsl(205, 100%, 96%);
+
+  --clr-B1: hsl(330, 73%,  19%);
+  --clr-B2: hsl(330, 77%,  27%);
+  --clr-B3: hsl(330, 72%,  37%);
+  --clr-B4: hsl(330, 63%,  48%);
+  --clr-B5: hsl(330, 89%,  70%);
+  --clr-B6: hsl(330, 90%,  76%);
+  --clr-B7: hsl(330, 86%,  81%);
+  --clr-B8: hsl(330, 90%,  88%);
+  --clr-B9: hsl(330, 100%, 96%);
+
+  --clr-C1: hsl(157, 70%,  19%);
+  --clr-C2: hsl(157, 70%,  29%);
+  --clr-C3: hsl(157, 77%,  39%);
+  --clr-C4: hsl(157, 72%,  49%);
+  --clr-C5: hsl(157, 63%,  59%);
+  --clr-C6: hsl(157, 89%,  69%);
+  --clr-C7: hsl(157, 90%,  79%);
+
+  --clr-D1: hsl(41,100%, 25%);
+  --clr-D2: hsl(41,100%, 35%);
+  --clr-D3: hsl(41,100%, 45%);
+  --clr-D4: hsl(41,100%, 55%);
+  --clr-D5: hsl(41,100%, 65%);
+  --clr-D6: hsl(41,100%, 75%);
+  
+  --clr-E1: hsl(209, 61%, 16%);
+  --clr-E2: hsl(211, 39%, 23%);
+  --clr-E3: hsl(209, 34%, 30%);
+  --clr-E4: hsl(209, 28%, 39%);
+  --clr-E5: hsl(210, 22%, 49%);
+  --clr-E6: hsl(209, 23%, 60%);
+  --clr-E7: hsl(211, 27%, 70%);
+  --clr-E8: hsl(210, 31%, 80%);
+
+  --clr-F1: hsl(261, 67%, 10%);
+  --clr-F2: hsl(261, 67%, 20%);
+  --clr-F3: hsl(261, 67%, 30%);
+  --clr-F4: hsl(261, 67%, 40%);
+  --clr-F5: hsl(261, 67%, 50%);
+  --clr-F6: hsl(261, 67%, 60%);
+
+  --clr-white: #fff;
+  --clr-black: #222;
+  --clr-blue-dark: hsl(207, 100%, 13%);
+  --clr-blue-light: hsl(207, 100%, 63%);
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  
+  /* --- CSS Distances & Times --- */
+  --ff1: 'Times New Roman', Times, serif;
+  --ff2: monospace;
+  --ff3: 'Rubik', sans-serif;
+  --ff4: 'Zen Dots', cursive;
+
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --glow-blue: 0px 0px 15px 5px rgb(57, 40, 122);
+  --glow-red: 0px 0px 15px 5px rgb(116, 30, 66);
+}
+
+
+/* --------- Static Web Design --------- */
+/* --- Global Styles --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  min-height: 70vh;
+  
+  font-family: var(--ff1);
+  background: var(--clr-black);
+  color: var(--clr-A3);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul  { list-style-type: none; }
+a   { text-decoration: none; }
+img { display: block; }
+
+section {
+  width: 80%;
+  padding: 20px;
+  top: 30px;
+  
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--clr-A1);
+  color: var(--clr-D4);
+  border: 1px solid black;
+}
+
+.currencies button {
+  margin-bottom: 10px;
+}
+
+#entry { z-index: 2; }
+form:not(#tx-form) .form-group {
+  text-align: left;
+}
+
+section .currencies button {
+  width: 150px;
+  font-weight: bold;
+}
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none;
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+#output-area {
+  text-align: left;
+  color: black;
+  line-height: 1;
+}
+
+#output-area .key-info {
+  margin-bottom: 15px;
+}
+
+#xmr-address {
+  word-break: break-all;
+}
+
+#xmr-address span {
+  text-decoration: underline;
+}
+
+.fg-xmr #IntAddress {
+  width: 100%;
+  height: 100px;
+
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.fg-xmr button {
+  max-width: 20%;
+
+  display: block;
+}
+
+
+/* Dynamic Web Design */
+@media screen and (max-width: 800px) {
+  section {
+    width: 95%;
+    padding: 20px 0;
+  }
+}
+@media screen and (min-width: 801px) {
+  section { width: 50%; }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monero Wallet</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="./styles/styles.css" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" defer></script>
+  <script src="./dist/bundle.js" defer></script>
+  <script src="./scripts/wallet.js" defer></script>
+  <script src="./scripts/entry.js" defer></script>
+</head>
+<body>
+  <section id="wallet_area">
+    <div class="cover-container d-flex flex-column">
+      <!-- Main Wallet Area -->
+      <main role="main" class="inner cover">
+        <h1 id="foretag" class="cover-heading"></h1>
+        <p class="lead"><button id="create-wallet" class="btn btn-warning">Create New Wallet</button></p>
+
+        <!-- Dynamically Generated Content -->
+        <div class="container">
+          <!-- Alert Banner -->
+          <div id="alert-msg"></div>
+          
+          <!-- New Wallet Form -->
+          <div id="new-wallet" style="display: none">
+            <form id="new-wallet-form">
+              <div class="form-group fg-xmr">
+                <h3>Make Address for receiving Monero</h3>
+                <div id="IntAddress" class="form-control" style="width: 80%; display: inline-block;" spellcheck="false"></div>
+                <button type="button" class="btn btn-warning" onclick="makeIntAddress()">Create</button>
+              </div>
+            </form>
+          </div>
+          
+          <!-- Import Wallet Form -->
+          <div id="old-wallet" style="display: none">
+            <form id="old-wallet-form">
+              <div class="form-group fg-xmr">
+                <input type="text" name="label" placeholder="Enter your wallet label" class="form-control"> <br><br>
+                <button type="submit" class="btn btn-warning" onclick="MakeXMRWallet()">Unlock</button>
+              </div>
+            </form>
+          </div>
+    
+          <!-- Area for wallet info and sending TX -->
+          <div id="output-area"></div>
+          <div class="filler-area"></div>
+        </div>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner"></div>
+      </footer>
+    </div>
+  </section>
+</body>
+</html>
